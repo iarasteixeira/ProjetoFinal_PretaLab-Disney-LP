@@ -21,9 +21,29 @@ function calcularMedia() {
   // evite mexer no código acima!
 
 
+const mediafinal = (nota1 + note2 + note3 + note4) / 4 ;
 
-
-
+if (mediafinal <= 0) {
   // evite mexer na linha de código abaixo!
-  document.getElementById("situacaoAluno").innerHTML = mensagem;
-}
+  document.getElementById("situacaoAluno").innerHTML = "Infelizmente sua média é zero :(";
+
+  }else if (mediafinal <= 3) {
+  document.getElementById("situacaoAluno").innerHTML = "Caramba, deu ruim, você obteve media " + mediafinal + ". Estude mais e tente novamente!";
+
+  }else if (mediafinal <= 5.9) {
+  document.getElementById("situacaoAluno").innerHTML = "Você tirou " + mediafinal + ". Falta pouco para a média"; 
+
+  }else if (mediafinal <= 7) {
+  document.getElementById("situacaoAluno").innerHTML = "Você está na média com " + mediafinal; 
+  
+  }else if (mediafinal <= 9.9) {
+  document.getElementById("situacaoAluno").innerHTML = "Notão! Sua média é " + mediafinal; 
+  
+  }else if (mediafinal === 10) {
+  document.getElementById("situacaoAluno").innerHTML = "Hoje é seu aniversário? Pq você ta de parabéns! 10 de média"; 
+  
+  }else {
+
+  }
+
+}  
